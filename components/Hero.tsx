@@ -172,7 +172,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
   return (
     <>
       <HeroBackground banner={header.banner}>
-        <div className="z-10 flex w-full flex-col items-center gap-6">
+        <div className="z-10 flex w-full flex-col items-center gap-5">
           <img
             className="h-20 w-20 rounded-full"
             alt={`${header.name} Logo`}
@@ -181,17 +181,20 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
           <h1 className="reservoir-h4 text-center text-black dark:text-white">
             {header.name}
           </h1>
+          <h2 className="reservoir-h6 relative block text-center text-black dark:text-white bottom-4">
+            Positive Vibrations Only™ Labs
+          </h2>
           <HeroSocialLinks collection={collection?.data?.collection} />
           <HeroStats stats={statsObj} />
           {header.description && (
             <>
               <div
-                className="relative overflow-hidden transition-[max-height] ease-in-out md:w-[423px]"
+                className="relative overflow-hidden transition-[max-height] ease-in-out md:w-[500px]"
                 style={{ maxHeight: descriptionHeight }}
               >
                 <p
                   ref={descriptionRef}
-                  className="text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white"
+                  className="text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white font-mono"
                 >
                   <ReactMarkdown linkTarget="_blank">
                     {header.description}

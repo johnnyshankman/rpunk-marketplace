@@ -3,6 +3,8 @@ import useDetails from 'hooks/useDetails'
 import { optimizeImage } from 'lib/optmizeImage'
 import Link from 'next/link'
 import React, { FC } from 'react'
+import ReactMarkdown from 'react-markdown'
+
 
 type Props = {
   collection: ReturnType<typeof useCollection>
@@ -37,7 +39,9 @@ const CollectionInfo: FC<Props> = ({ collection, details }) => {
       {tokenDescription && (
         <div className="reservoir-body-2 mt-4 break-words dark:text-white">
           {/* @ts-ignore */}
-          {tokenDescription}
+          <p class="font-mono text-xs r-markdown">
+            <ReactMarkdown children={tokenDescription} />
+          </p>
         </div>
       )}
     </article>

@@ -50,7 +50,7 @@ const ConnectWallet: FC = () => {
             DISABLE_POWERED_BY_RESERVOIR ? 'rounded' : 'rounded-t'
           }`}
         >
-          <div className="group flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
+          <div className="text-sm group flex w-full items-center justify-between rounded px-4 py-3 outline-none transition">
             <span>Balance </span>
             <span>
               {account.address && <Balance address={account.address} />}
@@ -58,7 +58,7 @@ const ConnectWallet: FC = () => {
           </div>
           <Link href={`/address/${account.address}`}>
             <DropdownMenu.Item asChild>
-              <a className="group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
+              <a className="text-sm group flex w-full cursor-pointer items-center justify-between rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800">
                 Portfolio
               </a>
             </DropdownMenu.Item>

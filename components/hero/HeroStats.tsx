@@ -14,7 +14,10 @@ type Props = {
 
 const HeroStats: FC<{ stats: Props }> = ({ stats }) => {
   return (
-    <div className="grid min-w-full grid-cols-2 items-center gap-[1px] overflow-hidden rounded-lg border-[1px] border-gray-300 bg-gray-300 dark:border-[#525252] dark:bg-[#525252] md:m-0 md:h-[82px] md:min-w-[647px] md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-black">
+    <div className="grid min-w-full grid-cols-2 items-center gap-[1px]
+      dark:border-[#89c659] border-2 dark:bg-[#89c659] md:m-0 md:h-[82px] md:min-w-[647px]
+      md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-black"
+    >
       <Stat name="items">
         <h3 className="reservoir-h6 dark:text-white">
           {formatNumber(stats.count)}
@@ -60,13 +63,13 @@ export const PercentageChange: FC<{ value: number | undefined | null }> = ({
 
   if (value < 1) {
     return (
-      <div className="text-sm text-[#FF3B3B]">{formatNumber(percentage)}%</div>
+      <div className="text-xs text-[#FF3B3B] font-mono">{formatNumber(percentage)}%</div>
     )
   }
 
   if (value > 1) {
     return (
-      <div className="text-sm text-[#06C270]">+{formatNumber(percentage)}%</div>
+      <div className="text-sm text-[#06C270] font-mono">+{formatNumber(percentage)}%</div>
     )
   }
 
