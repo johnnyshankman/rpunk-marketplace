@@ -14,9 +14,10 @@ type Props = {
 const CollectionInfo: FC<Props> = ({ collection, details }) => {
   const token = details.data?.tokens?.[0]
 
-  const tokenDescription =
-    token?.token?.description ||
-    collection.data?.collection?.metadata?.description
+  const tokenDescription : string =
+    token?.token?.description as string ||
+    collection.data?.collection?.metadata?.description as string ||
+    ''
 
   return (
     <article className="col-span-full rounded-2xl border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
@@ -39,8 +40,10 @@ const CollectionInfo: FC<Props> = ({ collection, details }) => {
       {tokenDescription && (
         <div className="reservoir-body-2 mt-4 break-words dark:text-white">
           {/* @ts-ignore */}
-          <p class="font-mono text-xs r-markdown">
-            <ReactMarkdown children={tokenDescription} />
+          <p className="font-mono text-xs r-markdown">
+            <ReactMarkdown>
+              {tokenDescription}
+            </ReactMarkdown>
           </p>
         </div>
       )}
