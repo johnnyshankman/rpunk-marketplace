@@ -181,8 +181,8 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
           <h1 className="reservoir-h4 text-center text-black dark:text-white">
             {header.name}
           </h1>
-          <h2 className="reservoir-h6 relative block text-center text-black dark:text-white bottom-4">
-            Positive Vibrations Only™ Labs
+          <h2 className="reservoir-h6 relative block text-center text-black dark:text-white bottom-4 text-sm">
+            by Positive Vibrations Only Labs™
           </h2>
           <HeroSocialLinks collection={collection?.data?.collection} />
           <HeroStats stats={statsObj} />
@@ -194,7 +194,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
               >
                 <p
                   ref={descriptionRef}
-                  className="text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white font-mono"
+                  className="r-markdown text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white font-mono"
                 >
                   <ReactMarkdown linkTarget="_blank">
                     {header.description}

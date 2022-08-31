@@ -18,23 +18,23 @@ const HeroStats: FC<{ stats: Props }> = ({ stats }) => {
       dark:border-[#89c659] border-2 dark:bg-[#89c659] md:m-0 md:h-[82px] md:min-w-[647px]
       md:grid-cols-4 md:gap-2 md:bg-white dark:md:bg-black"
     >
-      <Stat name="items">
+      <Stat name="Punks">
         <h3 className="reservoir-h6 dark:text-white">
           {formatNumber(stats.count)}
         </h3>
       </Stat>
-      <Stat name="top offer">
+      <Stat name="Offer">
         <h3 className="reservoir-h6 dark:text-white">
           <FormatWEth amount={stats.topOffer} />
         </h3>
       </Stat>
-      <Stat name="floor">
+      <Stat name="Floor">
         <h3 className="reservoir-h6 flex items-center justify-center gap-1 dark:text-white">
           <FormatEth amount={stats.floor} maximumFractionDigits={2} />
           <PercentageChange value={stats.floorChange} />
         </h3>
       </Stat>
-      <Stat name="total volume">
+      <Stat name="Volume">
         <h3 className="reservoir-h6 flex items-center justify-center gap-1 dark:text-white">
           <FormatEth amount={stats.allTime} maximumFractionDigits={2} />
         </h3>
