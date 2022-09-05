@@ -196,13 +196,13 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                   ref={descriptionRef}
                   className="r-markdown text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white font-mono"
                 >
-                  <p>☢️  <a href="https://rarity.tools/radioactive-punks" target="_blank">
+                  <p>☢️  <a href="https://rarity.tools/radioactive-punks" target="_blank" rel="noreferrer">
                     RARITY.TOOLS
-                  </a> ☢️  <a href="https://poprank.io/radioactive-punks" target="_blank">
+                  </a> ☢️  <a href="https://poprank.io/radioactive-punks" target="_blank" rel="noreferrer">
                   COOLNESS RANKS
-                  </a> ☢️  <a href="https://opensea.io/collection/radioactive-artdrops" target="_blank">
+                  </a> ☢️  <a href="https://opensea.io/collection/radioactive-artdrops" rel="noreferrer">
                   AIRDROPS
-                  </a> ☢️  <a href="https://opensea.io/collection/radioactive-pets" target="_blank">
+                  </a> ☢️  <a href="https://opensea.io/collection/radioactive-pets" target="_blank" rel="noreferrer">
                   PETS
                   </a> ☢️
                   </p>

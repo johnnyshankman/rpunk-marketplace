@@ -30,7 +30,7 @@ const SortMenuExplore: FC<Props> = ({ setSize }) => {
   }, [router.query])
 
   return (
-    <DropdownMenu.Root onOpenChange={setOpen} className="z-50">
+    <DropdownMenu.Root onOpenChange={setOpen}>
       <DropdownMenu.Trigger className="btn-primary-outline w-[228px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4">
         <span className="reservoir-label-l dark:text-white">
           {sortSelection}
