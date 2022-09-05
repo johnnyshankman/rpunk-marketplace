@@ -20,7 +20,7 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea }) => {
 
   return (
     <div className="col-span-full md:col-span-4 lg:col-span-5 lg:col-start-2">
-      <article className="col-span-full rounded-2xl border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
+      <article className="col-span-full border border-gray-300 bg-white p-6 dark:border-neutral-600 dark:bg-black">
         <div className="reservoir-h3 mb-6 flex items-center gap-4 overflow-hidden font-headings dark:text-white">
           <div>{token?.token?.name || `#${token?.token?.tokenId}`}</div>
           {bannedOnOpenSea && (
@@ -31,7 +31,7 @@ const Owner: FC<Props> = ({ details, bannedOnOpenSea }) => {
                 </Tooltip.Trigger>
                 <Tooltip.Content
                   sideOffset={5}
-                  className="reservoir-body-2 z-[10000] w-[191px] rounded-2xl bg-neutral-800 py-3 px-4 text-center text-white dark:bg-neutral-100 dark:text-black"
+                  className="reservoir-body-2 z-[10000] w-[191px] bg-neutral-800 py-3 px-4 text-center text-white dark:bg-neutral-100 dark:text-black"
                 >
                   <Tooltip.Arrow className="fill-neutral-800 dark:fill-neutral-100" />
                   Token is not tradeable on OpenSea

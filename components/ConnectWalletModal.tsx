@@ -28,12 +28,12 @@ const ConnectWalletModal: FC = () => {
           <Dialog.Content className="fixed inset-0 z-[1000] bg-[#000000b6]">
             <div className="fixed top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 transform">
               <div className="px-5">
-                <div className="mx-auto rounded-2xl border border-neutral-300 bg-white py-11 shadow-xl dark:border-neutral-600 dark:bg-black md:w-[460px]">
+                <div className="mx-auto border border-2 border-neutral-700 bg-white pt-11 shadow-xl dark:border-grey dark:bg-neutral-900 md:w-[460px]">
                   <div className="mx-12 mb-4 flex items-center justify-between">
                     <Dialog.Title className="reservoir-h4 font-headings dark:text-white">
                       Connect Wallet
                     </Dialog.Title>
-                    <Dialog.Close className="btn-primary-outline p-1.5 dark:border-neutral-600 dark:text-white dark:ring-primary-900 dark:focus:ring-4">
+                    <Dialog.Close className="shadow-none border-none p-1.5 dark:border-neutral-600 dark:text-white">
                       <HiX className="h-5 w-5" />
                     </Dialog.Close>
                   </div>
@@ -57,7 +57,7 @@ const wallets: { [key: string]: any } = {
   // Naming injected as MetaMask is not a mistake
   // This is how it was requested to be labeled
   injected: {
-    icon: '/icons/MetaMask.svg',
+    icon: '/icons/metamask.png',
     name: 'MetaMask',
     href: 'https://metamask.io/download/',
   },

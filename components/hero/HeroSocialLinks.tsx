@@ -149,7 +149,7 @@ const HeroSocialLinks: FC<Props> = ({ collection }) => {
         </a>
         {typeof social.externalUrl === 'string' && (
           <a
-            className="flex-none text-black dark:text-white"
+            className="flex-none text-black dark:text-[#89c659]"
             target="_blank"
             rel="noopener noreferrer"
             href={social.externalUrl}

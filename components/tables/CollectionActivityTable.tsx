@@ -47,7 +47,7 @@ const CollectionActivityTable: FC<Props> = ({ collection }) => {
               {headings.map((name, i) => (
                 <th
                   key={i}
-                  className="reservoir-subtitle pt-8 pb-7 font-medium text-neutral-600 dark:text-neutral-300"
+                  className="reservoir-subtitle pt-8 pb-7 font-medium text-neutral-600 dark:text-neutral-100"
                 >
                   {name}
                 </th>
@@ -174,7 +174,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
               src={saleSourceImgSrc}
               alt={`${sale.orderSource} Source`}
             />
-            <span className="text-sm text-neutral-600 dark:text-neutral-300">
+            <span className="text-sm text-neutral-600 dark:text-neutral-100">
               {saleDescription}
             </span>
           </div>
@@ -197,7 +197,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
             </a>
           </Link>
           <div>
-            <span className="mr-1 font-light text-neutral-600 dark:text-neutral-300">
+            <span className="mr-1 font-light text-neutral-600 dark:text-neutral-100">
               From
             </span>
             <Link href={`/address/${sale.from}`}>
@@ -205,7 +205,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
                 {fromShortAddress}
               </a>
             </Link>
-            <span className="mx-1 font-light text-neutral-600 dark:text-neutral-300">
+            <span className="mx-1 font-light text-neutral-600 dark:text-neutral-100">
               to
             </span>
             <Link href={`/address/${sale.to}`}>
@@ -217,7 +217,7 @@ const CollectionActivityTableRow: FC<CollectionActivityTableRowProps> = ({
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mb-4 flex items-center gap-2 font-light text-neutral-600 dark:text-neutral-300"
+                className="mb-4 flex items-center gap-2 font-light text-neutral-600 dark:text-neutral-100"
               >
                 {timeAgo}
                 <FiExternalLink className="h-4 w-4" />

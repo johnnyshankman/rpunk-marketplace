@@ -67,9 +67,10 @@ const AttributeSelector: FC<Props> = ({
               attribute={key}
               key={`${value}${index}`}
               setTokensSize={setTokensSize}
+              className="shadow-none"
             >
-              <span className="reservoir-body dark:text-white">{value}</span>
-              <span className="reservoir-body dark:text-white">{count}</span>
+              <span className="reservoir-body dark:text-white text-xs">{value}</span>
+              <span className="reservoir-body dark:text-white text-xs">{count}</span>
             </AttributeButton>
           )
         })}

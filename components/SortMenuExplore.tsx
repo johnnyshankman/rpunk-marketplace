@@ -30,7 +30,7 @@ const SortMenuExplore: FC<Props> = ({ setSize }) => {
   }, [router.query])
 
   return (
-    <DropdownMenu.Root onOpenChange={setOpen}>
+    <DropdownMenu.Root onOpenChange={setOpen} className="z-50">
       <DropdownMenu.Trigger className="btn-primary-outline w-[228px] justify-between px-4 py-3 dark:border-neutral-600 dark:ring-primary-900 dark:focus:ring-4">
         <span className="reservoir-label-l dark:text-white">
           {sortSelection}
@@ -45,7 +45,7 @@ const SortMenuExplore: FC<Props> = ({ setSize }) => {
       <DropdownMenu.Content
         align="end"
         sideOffset={12}
-        className="w-48 divide-y-[1px] divide-[#D1D5DB] overflow-hidden rounded-[8px] border-[1px] border-[#D1D5DB] bg-white shadow-md radix-side-bottom:animate-slide-down dark:divide-neutral-600 dark:border-neutral-600 dark:bg-neutral-900 md:w-56"
+        className="z-50 w-48 divide-y-[1px] divide-[#D1D5DB] overflow-hidden border-[1px] border-[#D1D5DB] bg-white shadow-md radix-side-bottom:animate-slide-down dark:divide-neutral-600 dark:border-neutral-600 dark:bg-neutral-900 md:w-56"
       >
         {Object.keys(options).map((key) => (
           <DropdownMenu.Item

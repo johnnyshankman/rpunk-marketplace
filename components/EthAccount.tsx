@@ -36,7 +36,7 @@ const EthAccount: FC<Props> = ({
         </div>
       ) : (
         <div
-          className="reservoir-label-l block whitespace-nowrap font-mono dark:text-white"
+          className="text-sm reservoir-label-l block whitespace-nowrap font-mono dark:text-white"
           title={address}
         >
           {truncateAddress(address || '')}

@@ -148,9 +148,9 @@ const CartMenu: FC = () => {
   return (
     <Popover.Root>
       <Popover.Trigger>
-        <div className="relative z-10 grid h-8 w-8 items-center justify-center rounded-full">
+        <div className="relative z-10 grid h-10 w-10 items-center justify-center">
           {cartCount > 0 && (
-            <div className="reservoir-subtitle absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary-700 text-white">
+            <div className="reservoir-subtitle absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center bg-primary-700 text-white">
               {cartCount}
             </div>
           )}
@@ -159,19 +159,19 @@ const CartMenu: FC = () => {
       </Popover.Trigger>
       <StyledContent
         sideOffset={22}
-        className="z-[10000000] w-[367px] rounded-2xl bg-white p-6 shadow-lg dark:border dark:border-neutral-700 dark:bg-neutral-900"
+        className="z-[10000000] w-[367px] bg-white p-6 shadow-lg dark:border dark:border-neutral-700 dark:bg-neutral-900"
       >
         <div className="mb-4 flex justify-between">
           <div className="flex items-center">
             <div className="reservoir-h6 mr-3">My Cart</div>
-            <div className="reservoir-subtitle flex h-5 w-5 items-center justify-center rounded-full bg-primary-700 text-white">
+            <div className="reservoir-subtitle flex h-5 w-5 items-center justify-center bg-primary-700 text-white">
               {cartCount}
             </div>
           </div>
           {cartCount > 0 && (
             <button
               onClick={() => setCartTokens([])}
-              className="text-primary-700 dark:text-primary-300 dark:text-white"
+              className="shadow-none text-primary-700 dark:text-primary-300 dark:text-white"
             >
               Clear
             </button>
@@ -205,6 +205,7 @@ const CartMenu: FC = () => {
                     </div>
                   </div>
                   <button
+                    className="shadow-none"
                     onClick={() => {
                       const newCartTokens = [...cartTokens]
                       newCartTokens.splice(index, 1)

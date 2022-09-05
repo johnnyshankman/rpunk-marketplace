@@ -43,14 +43,14 @@ const AttributesFlex: FC<Props> = ({ className }) => {
       {filters.map(({ key, value }) => (
         <div
           key={key}
-          className="flex rounded-full border border-neutral-300 bg-primary-100 px-4 py-3 dark:border-neutral-600 dark:bg-primary-900 dark:text-white"
+          className="flex border border-neutral-300 background-[#9B9BF9] px-4 py-3 dark:border-neutral-600 dark:bg-primary-900 dark:text-white"
         >
-          <div className="reservoir-label-l flex items-center justify-between gap-1.5 dark:text-white ">
+          <div className="reservoir-label-l flex items-center justify-between gap-1.5 dark:text-black ">
             <p className="capitalize">{key}</p>
             <p>{value}</p>
           </div>
           <button
-            className="ml-4"
+            className="ml-4 shadow-none border-none"
             onClick={() => toggleOffAttribute(router, key)}
           >
             <HiX className="h-3.5 w-3.5" />

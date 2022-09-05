@@ -181,7 +181,7 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
           <h1 className="reservoir-h4 text-center text-black dark:text-white">
             {header.name}
           </h1>
-          <h2 className="reservoir-h6 relative block text-center text-black dark:text-white bottom-4 text-sm">
+          <h2 className="reservoir-h6 relative block text-center text-black dark:text-white text-sm">
             by Positive Vibrations Only Labs™
           </h2>
           <HeroSocialLinks collection={collection?.data?.collection} />
@@ -196,27 +196,18 @@ const Hero: FC<Props> = ({ fallback, collectionId }) => {
                   ref={descriptionRef}
                   className="r-markdown text-center text-sm text-[#262626] transition-[width] duration-300 ease-in-out dark:text-white font-mono"
                 >
-                  <ReactMarkdown linkTarget="_blank">
-                    {header.description}
-                  </ReactMarkdown>
+                  <p>☢️  <a href="https://rarity.tools/radioactive-punks" target="_blank">
+                    RARITY.TOOLS
+                  </a> ☢️  <a href="https://poprank.io/radioactive-punks" target="_blank">
+                  COOLNESS RANKS
+                  </a> ☢️  <a href="https://opensea.io/collection/radioactive-artdrops" target="_blank">
+                  AIRDROPS
+                  </a> ☢️  <a href="https://opensea.io/collection/radioactive-pets" target="_blank">
+                  PETS
+                  </a> ☢️
+                  </p>
                 </p>
               </div>
-              {isLongDescription && (
-                <a
-                  className="mt-[-18px]"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    setDescriptionExpanded(!descriptionExpanded)
-                  }}
-                >
-                  <FiChevronDown
-                    className={`h-5 w-5 text-black transition-transform dark:text-white ${
-                      descriptionExpanded ? 'rotate-180' : ''
-                    }`}
-                    aria-hidden
-                  />
-                </a>
-              )}
             </>
           )}
           <div className="flex w-full flex-col justify-center gap-4 md:flex-row">

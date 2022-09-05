@@ -87,7 +87,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
             return (
               <div
                 key={`${token.contract}${token.tokenId}`}
-                className="group relative mb-6 grid transform-gpu self-start overflow-hidden border border-[#D4D4D4] bg-white transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-800 dark:ring-1 dark:ring-neutral-600"
+                className="group relative mb-6 grid transform-gpu self-start overflow-hidden border border-[#D4D4D4] bg-white transition ease-in hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-lg hover:ease-out dark:border-0 dark:bg-neutral-700 dark:ring-1 dark:ring-neutral-600"
               >
                 {isInCart ? (
                   <div className="absolute top-4 right-4 z-10 flex h-[34px] w-[34px] animate-slide-down items-center justify-center overflow-hidden rounded-full bg-primary-700">
@@ -139,7 +139,7 @@ const TokensGrid: FC<Props> = ({ tokens, viewRef, collectionImage }) => {
                   </a>
                 </Link>
                 <div
-                  className={`absolute bottom-[0px] w-full bg-white transition-all group-hover:bottom-[0px] dark:bg-neutral-800 ${
+                  className={`absolute bottom-[0px] w-full bg-white transition-all group-hover:bottom-[0px] dark:bg-neutral-700 ${
                     token.floorAskPrice != null &&
                     token.floorAskPrice != undefined
                       ? 'md:-bottom-[41px]'

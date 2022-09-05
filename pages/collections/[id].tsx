@@ -184,14 +184,14 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           value={router.query?.tab?.toString() || 'items'}
           className="col-span-full grid grid-cols-4 gap-x-4 md:grid-cols-8 lg:grid-cols-12 3xl:grid-cols-16 4xl:grid-cols-21"
         >
-          <Tabs.List className="col-span-full flex justify-center border-b border-[#D4D4D4] dark:border-[#525252]">
+          <Tabs.List className="col-span-full flex justify-center">
             {tabs.map(({ name, id }) => (
               <Tabs.Trigger
                 key={id}
                 id={id}
                 value={id}
                 className={
-                  'group reservoir-h6 relative min-w-0 whitespace-nowrap border-b-2 border-transparent py-4 px-8 text-center text-[#525252] hover:text-black focus:z-10 radix-state-active:border-black radix-state-active:text-black dark:text-white dark:radix-state-active:border-white dark:radix-state-active:text-white'
+                  'shadow-none group reservoir-h6 relative min-w-0 whitespace-nowrap py-4 px-6 text-center text-[#525252] hover:text-black focus:z-10 radix-state-active:border-b-[#9B9BF9] radix-state-active:text-black dark:text-white dark:radix-state-active:text-[#9B9BF9]'
                 }
                 onClick={() => toggleOnItem(router, 'tab', id)}
               >
@@ -291,7 +291,7 @@ const Home: NextPage<Props> = ({ fallback, id }) => {
           </Tabs.Content>
           <Tabs.Content
             value="activity"
-            className="col-span-full mx-[25px] grid lg:col-start-2 lg:col-end-[-2]"
+            className="col-span-full bg-[#242722] px-[30px] grid lg:col-start-2 lg:col-end-[-2]"
           >
             <CollectionActivityTable collection={collection.data?.collection} />
           </Tabs.Content>

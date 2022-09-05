@@ -69,8 +69,8 @@ const Sidebar: FC<Props> = ({ attributes, setTokensSize }) => {
               className={`reservoir-label-l w-full py-5 px-6 text-left capitalize transition dark:text-white ${
                 router.query.attribute_key &&
                 router.query.attribute_key.toString() === attribute.key
-                  ? 'bg-primary-100 hover:bg-primary-300  dark:bg-primary-900 dark:hover:bg-primary-900'
-                  : 'hover:bg-primary-100 dark:hover:bg-primary-900'
+                  ? 'bg-primary-100 hover:bg-primary-300 dark:bg-primary-900 dark:hover:bg-primary-900 dark:text-black'
+                  : 'hover:bg-primary-100 dark:hover:bg-primary-900 dark:hover:text-black'
               }`}
             >
               {attribute.key}
@@ -79,11 +79,10 @@ const Sidebar: FC<Props> = ({ attributes, setTokensSize }) => {
               className={`flex items-center ${
                 router.query.attribute_key &&
                 router.query.attribute_key.toString() === attribute.key
-                  ? 'bg-primary-100 hover:bg-primary-300 dark:bg-primary-900 dark:hover:bg-primary-900'
-                  : 'hover:bg-primary-100 dark:hover:bg-primary-900'
+                  ? 'bg-primary-100 hover:bg-primary-300 dark:bg-primary-900 dark:hover:bg-primary-900 text-black'
+                  : 'hover:bg-primary-100 dark:hover:bg-primary-900 hover:text-black text-white'
               }`}
             >
-              <div className="h-6 w-px bg-gray-300 dark:bg-neutral-600"></div>
               <Accordion.Trigger className="p-5 transition">
                 <FiChevronDown className="h-5 w-5" aria-hidden />
               </Accordion.Trigger>

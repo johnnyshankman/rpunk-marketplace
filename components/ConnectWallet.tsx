@@ -70,7 +70,7 @@ const ConnectWallet: FC = () => {
                 dispatch({ type: 'CONNECT_WALLET', payload: false })
                 disconnect()
               }}
-              className="group flex w-full cursor-pointer items-center justify-between gap-3 rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
+              className="text-sm group flex w-full cursor-pointer items-center justify-between gap-3 rounded px-4 py-3 outline-none transition hover:bg-neutral-100 focus:bg-neutral-100 dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
             >
               <span>Disconnect</span>
               <HiOutlineLogout className="h-6 w-7" />
