@@ -76,6 +76,18 @@ const TokenInfo: FC<Props> = ({ details }) => {
             className="reservoir-h6 font-headings"
             target="_blank"
             rel="noopener noreferrer"
+            href={`https://x2y2.io/eth/${token?.token?.contract}/${token?.token?.tokenId}`}
+          >
+            <img
+              src="/icons/X2Y2.png"
+              alt="X2Y2 Icon"
+              className="h-6 w-6"
+            />
+          </a>
+          <a
+            className="reservoir-h6 font-headings"
+            target="_blank"
+            rel="noopener noreferrer"
             href={`https://looksrare.org/collections/${token?.token?.contract}/${token?.token?.tokenId}`}
           >
             <img
